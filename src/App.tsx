@@ -158,8 +158,7 @@ export default function App() {
             SaverAttacker: new AttackerSaver(),
             AttackerSaver: new SaverAttacker()
         })
-            .flatMap(type => Array(startBirdsCount)
-                .fill(new Bird(type, startDNAPoints)))
+            .flatMap(type => Array(startBirdsCount).fill(new Bird(type, startDNAPoints)))
             .sort(() => Math.random() - 0.5)
 
         for (let i = 1; i < circlesCount; i++) {
